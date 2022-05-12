@@ -1,3 +1,6 @@
+#ifndef UNIFIER_H
+#define UNIFIER_H
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stddef.h>
@@ -21,7 +24,7 @@
 
 #define NVS_NAMESPACE   "main"
 
-/* FreeRTOS short macros */
+/* FREERTOS SHORT MACROS */
 
 #define RTOS_MS(ms) pdMS_TO_TICKS(ms)
 #define RTOS_SEC(sec) pdMS_TO_TICKS(sec*1000)
@@ -29,7 +32,7 @@
 #define TASK_DELAY_MS(ms) vTaskDelay(RTOS_MS(ms))
 #define TASK_DELAY_SEC(sec) vTaskDelay(RTOS_SEC(sec))
 
-/* Short numtypes */
+/* SHORT NUMTYPES */
 
 typedef uint8_t u8_t;
 typedef uint16_t u16_t;
@@ -52,3 +55,5 @@ bool wifi_is_ap_active();
 void wifi_to_sta();
 void wifi_to_ap();
 void wifi_to_apsta();
+
+#endif //UNIFIER_H
