@@ -223,6 +223,7 @@ void wifi_to_apsta()
 
 void wifi_init()
 {
+    tcpip_adapter_init();
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
